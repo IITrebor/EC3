@@ -1,41 +1,24 @@
 @server = https://iitrebor-didactic-potato-6jx6grwwgx9fwq-8080.preview.app.github.dev/
 
+@api = {{server}}/api/ec3
+
+################ Categorias: ################
 ###
-GET {{server}}/
+GET {{api}}/categorias
 ###
-GET {{server}}/instrumentos
-###
-POST {{server}}/instrumentos
+POST {{api}}/categorias
 Content-Type: application/json
 
-{"nombre": "Piano"}
+{"nombre": "Instrumentos de Cuerda"}
+################ Instrumentos: ################
 ###
-GET {{server}}/cursos/1
+GET {{api}}/instrumentos
 ###
-PATCH {{server}}/cursos/2
+POST {{api}}/instrumentos
 Content-Type: application/json
 
-{"nombre": "Lenguajes de Programación"}
+{"nombre": "Guitarra", "categoria": "http://localhost/api/ec3/categorias/1"}
 ###
-GET {{server}}/cursos?size=2&page=0
+GET {{api}}/instrumentos/1/categoria
 ###
-GET {{server}}/cursos?size=2&page=0&sort=creditos,desc
-###
-GET {{server}}/cursos?size=2&page=1&sort=creditos,desc
-###
-GET {{server}}/cursos/search/findByNombre?nombre=Algoritmos
-
-#############
-
-GET {{server}}/carreras
-###
-POST {{server}}/carreras
-Content-Type: application/json
-
-{"nombre": "Marketing"}
-###
-GET {{server}}/carreras/2/cursos
-###
-GET {{server}}/carreras/1/cursos
-###
-GET {{server}}/cursos/4/carrera?size=2&page=0&sort=creditos,desc
+GET {{api}}/instrumentos?sort=nombre,desc

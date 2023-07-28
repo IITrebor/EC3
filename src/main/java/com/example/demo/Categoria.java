@@ -12,23 +12,23 @@ import jakarta.persistence.OrderBy;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "carrera")
-public class Carrera {
+@Table(name = "categoria")
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private String nombre;
 
-    @OneToMany(targetEntity = Curso.class, mappedBy = "carrera")
+    @OneToMany(targetEntity = Instrumento.class, mappedBy = "categoria")
     @OrderBy("nombre ASC")
-    private Set<Curso> cursos = new HashSet<Curso>();
+    private Set<Instrumento> instrumentos = new HashSet<Instrumento>();
 
-    public Set<Curso> getCursos() {
-        return cursos;
+    public Set<Instrumento> getInstrumentos() {
+        return instrumentos;
     }
-    public void setCursos(Set<Curso> cursos) {
-        this.cursos = cursos;
+    public void setInstrumentos(Set<Instrumento> instrumentos) {
+        this.instrumentos = instrumentos;
     }
 
     public Integer getId() {

@@ -1,5 +1,5 @@
-@server = https://iitrebor-didactic-potato-6jx6grwwgx9fwq-8080.preview.app.github.dev/
-
+#@server = https://iitrebor-didactic-potato-6jx6grwwgx9fwq-8080.preview.app.github.dev/
+@server=https://ec3-2bbf.onrender.com
 @api = {{server}}/api/ec3
 
 ################ Categorias: ################

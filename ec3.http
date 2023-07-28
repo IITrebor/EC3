@@ -1,14 +1,14 @@
-@server = https://texai-laughing-space-xylophone-5x4ww94j27q9x-8080.preview.app.github.dev
+@server = https://iitrebor-didactic-potato-6jx6grwwgx9fwq-8080.preview.app.github.dev/
 
 ###
 GET {{server}}/
 ###
-GET {{server}}/cursos
+GET {{server}}/instrumentos
 ###
-POST {{server}}/cursos
+POST {{server}}/instrumentos
 Content-Type: application/json
 
-{"nombre": "Compiladores 2", "creditos": 5}
+{"nombre": "Piano"}
 ###
 GET {{server}}/cursos/1
 ###
